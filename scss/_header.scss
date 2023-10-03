@@ -1,5 +1,102 @@
-.header {
-	color: red;
-	font-size: 4rem;
-	font-weight: 600;
+.container:before {
+   content:'';
+   width: 445px;
+   height: 720px;
+   background: url('../img/header/foto.svg');
+   position: absolute;
+   
+   right: 0px;
+   background-repeat: no-repeat;
+   background-size: contain;
+   z-index: 1;
+}
+
+
+.container {
+   max-width: 1110px;
+   margin: 0 auto;
+   background-color: #151515;
+   position: relative;
+}
+
+.header_nav {
+   display: flex;
+   padding-top: 40px;
+   justify-content: space-between;
+}
+
+.header_nav p{
+   font-size: 32px;
+   font-weight: bold;
+   color: #ffffff;
+   margin: 0;
+}
+
+.social {
+   padding-top: 8px;
+   z-index: 2;
+}
+
+.social a{
+   padding-left: 32px;
+}
+
+.social a:last-child{
+   padding-right: 32px;
+}
+
+.about img{
+   position: absolute;
+   left: -151px;
+   top: 145px;
+   z-index: 1;
+}
+
+.about_me {
+   padding-bottom: 100px;
+   position: relative;
+}
+.about_me h1{
+   position: relative;
+   font-size: 88px;
+   font-weight: bold;
+   color: #ffffff;
+   max-width: 750px;
+   letter-spacing: -2.5px;
+   padding-top: 110px;
+   z-index: 1;
+}
+
+.about_me h1 span{
+   border-bottom: 5px solid #4EE1A0;
+}
+   
+
+.about_me p{
+   font-size: 18px;
+   line-height: 28px;
+   color: #ffffff;
+   max-width: 445px;
+   padding-top: 43px;
+}
+
+.about_me .btn{
+   margin-top: 66px;
+   color: #ffffff;
+   border-bottom: 2px solid #4EE1A0;
+   cursor: pointer;
+   transition: all 0.3s ease-out;
+   display: inline-block;
+   padding-bottom: 10px;
+}
+
+.about_me img {
+   position: absolute;
+   left: 598px;
+   top: 440px;
+   z-index: 1;
+}
+
+.about_me .btn:hover{
+   color: #4EE1A0;
 }
