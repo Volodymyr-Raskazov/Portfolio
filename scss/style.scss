@@ -1,0 +1,21 @@
+// Імпортуємо файли стилів
+@import "_header";
+@import "_main";
+@import "_footer";
+
+// Загальні стилі
+html,
+body {
+	height: 100%;
+	font-family: "Space Grotesk";
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 1 auto;
+}
