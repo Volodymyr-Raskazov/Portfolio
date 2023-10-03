@@ -1,9 +1,16 @@
 // Імпортуємо файли стилів
+@import "_reset";
 @import "_header";
 @import "_main";
 @import "_footer";
 
 // Загальні стилі
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 html,
 body {
 	height: 100%;
@@ -15,6 +22,7 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	background: #151515;
 }
 
 .main {
