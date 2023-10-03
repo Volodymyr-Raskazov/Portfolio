@@ -1,5 +1,140 @@
-.main {
-	color: green;
-	font-size: 8rem;
-	font-weight: 800;
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 162.5%;
+	letter-spacing: 2.286px;
+	border-bottom: #4ee1a0 2px solid;
+	padding-bottom: 10px;
+	a {
+		color: inherit;
+	}
+	&:hover {
+		color: #4ee1a0;
+	}
+}
+
+.projects {
+	padding-bottom: 140px;
+}
+
+.projects {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 80px;
+	}
+	&__title {
+		font-size: 88px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 100%;
+		letter-spacing: -2.5px;
+		@media (max-width: 768px) {
+			font-size: 72px;
+			letter-spacing: -2.045px;
+		}
+		@media (max-width: 425px) {
+			font-size: 40px;
+			letter-spacing: -1.136px;
+		}
+	}
+	&__button {
+	}
+	&__gallery {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		column-gap: 24.19px;
+		row-gap: 69px;
+		@media (max-width: 768px) {
+			column-gap: 20px;
+			row-gap: 60px;
+		}
+		@media (max-width: 425px) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(6, 1fr);
+			row-gap: 40px;
+		}
+	}
+	&__item {
+		position: relative;
+	}
+}
+
+.item-projects {
+	&__image {
+		padding-bottom: 74.074%;
+		margin-bottom: 20px;
+	}
+
+	&__subtitle {
+		text-transform: uppercase;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 133.333%;
+		margin-bottom: 7px;
+	}
+
+	&__description {
+		display: flex;
+		gap: 18px;
+		@media (max-width: 768px) {
+			margin-bottom: 20px;
+		}
+	}
+	&__overlay {
+		position: absolute;
+		width: 100%;
+		height: 82.3%;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			opacity: 1;
+			background-color: rgba(0, 0, 0, 0.75);
+		}
+		@media (max-width: 768px) {
+			position: relative;
+			opacity: 1;
+			flex-direction: row;
+			height: auto;
+			justify-content: start;
+			gap: 32px;
+		}
+	}
+}
+
+.description-items {
+	&__item {
+		text-transform: uppercase;
+		color: #d9d9d9;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 155.556%;
+	}
+}
+
+.oveplay-items {
+	&__item {
+		background-color: rgba(0, 0, 0, 0);
+		&:not(:last-child) {
+			margin-bottom: 48px;
+			@media (max-width: 768px) {
+				margin-bottom: 0;
+			}
+		}
+	}
 }

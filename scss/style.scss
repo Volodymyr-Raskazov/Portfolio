@@ -1,5 +1,6 @@
 // Імпортуємо файли стилів
 @import "_reset";
+@import "_ibg";
 @import "_header";
 @import "_main";
 @import "_footer";
@@ -9,6 +10,7 @@ html,
 body {
 	height: 100%;
 	font-family: "Space Grotesk";
+	color: #ffffff;
 	background-color: #151515;
 }
 
@@ -17,6 +19,15 @@ body {
 	display: flex;
 	flex-direction: column;
 	background: #151515;
+}
+
+[class*="__container"] {
+	max-width: 1140px;
+	padding: 0 15px;
+	margin: 0 auto;
+	@media (max-width: 768px) {
+		padding: 0 32px;
+	}
 }
 
 .main {
