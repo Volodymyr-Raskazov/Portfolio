@@ -11,6 +11,8 @@ $green-color: #4EE1A0;
 .container_footer {
 	width: 1110px;
 	margin: 0 auto;
+	position: relative;
+
 }
 
 footer {
@@ -21,6 +23,16 @@ footer {
 	height: 100%;
 	width: 100%;
 	font-size: 22px;
+
+	.oval {
+		position: absolute;
+		top: 234px;
+		left: -286px;
+		img {
+			width: 446px;
+		}
+	}
+
 	.contact-cols {
 		display: flex;
 		justify-content: space-between;
@@ -66,6 +78,9 @@ footer {
 					&:-ms-input-placeholder {
 						padding-left: 24px;
 					}
+					&:hover {
+						border-bottom: 1px solid $green-color;
+					}
 				}
 				textarea {
 					resize: none;
@@ -101,6 +116,9 @@ footer {
 					letter-spacing: 2.286px;
 					border-bottom: 2px solid $green-color;
 					align-self: end;
+					&:hover {
+						color: $green-color;
+					}
 				}
 			}
 		}

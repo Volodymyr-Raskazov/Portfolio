@@ -398,6 +398,7 @@ h6 {
 .container_footer {
   width: 1110px;
   margin: 0 auto;
+  position: relative;
 }
 
 footer {
@@ -408,6 +409,16 @@ footer {
   height: 100%;
   width: 100%;
   font-size: 22px;
+}
+
+footer .oval {
+  position: absolute;
+  top: 234px;
+  left: -286px;
+}
+
+footer .oval img {
+  width: 446px;
 }
 
 footer .contact-cols {
@@ -487,6 +498,11 @@ footer .contact-cols .col .form_send_message textarea:-ms-input-placeholder {
   padding-left: 24px;
 }
 
+footer .contact-cols .col .form_send_message input:hover,
+footer .contact-cols .col .form_send_message textarea:hover {
+  border-bottom: 1px solid #4EE1A0;
+}
+
 footer .contact-cols .col .form_send_message textarea {
   resize: none;
   height: 107px;
@@ -524,6 +540,10 @@ footer .contact-cols .col .form_send_message button {
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
   align-self: end;
+}
+
+footer .contact-cols .col .form_send_message button:hover {
+  color: #4EE1A0;
 }
 
 footer hr {
