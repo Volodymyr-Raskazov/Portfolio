@@ -486,4 +486,8 @@ body {
     grid-template-rows: repeat(6, 1fr);
     row-gap: 40px;
   }
+
+  [class*=__container] {
+    padding: 0 15px;
+  }
 }
