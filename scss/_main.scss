@@ -16,6 +16,9 @@
 	&:hover {
 		color: #4ee1a0;
 	}
+	@media (max-width: 650px) {
+		letter-spacing: 1.286px;
+	}
 }
 
 .projects {
@@ -56,7 +59,7 @@
 			column-gap: 20px;
 			row-gap: 60px;
 		}
-		@media (max-width: 425px) {
+		@media (max-width: 520px) {
 			grid-template-columns: repeat(1, 1fr);
 			grid-template-rows: repeat(6, 1fr);
 			row-gap: 40px;
@@ -112,6 +115,9 @@
 			height: auto;
 			justify-content: start;
 			gap: 32px;
+		}
+		@media (max-width: 650px) {
+			gap: 20px;
 		}
 	}
 }
