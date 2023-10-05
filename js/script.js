@@ -15,7 +15,7 @@ function animateElements() {
    animateToScroll("footer .contact-cols .col h3, footer .contact-cols .col p, footer .oval"
        , "fadeInLeft", false);
 
-   animateToScroll(".skills", "fadeIn", false);
+   animateToScroll(".skills .skills_item", "fadeIn", false);
    animateToScroll(".projects__item", "fadeIn", false);
 }
 function animateToScroll(targetSelector, animationClass, resetOnScrollUp) {

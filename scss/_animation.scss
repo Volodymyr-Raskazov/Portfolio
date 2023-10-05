@@ -1,44 +1,44 @@
 
 @keyframes fadeInRight {
-    to {
-        opacity: 1;
-    }
-
     from {
         opacity: 0;
         -webkit-transform: translate(50%, 50%);
         transform: translate(50%, 50%);
     }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .fadeInRight {
-    animation: fadeInRight 1s linear both
+    animation: fadeInRight 1s linear both;
 }
 
 
 @keyframes fadeInLeft {
-    to {
-        opacity: 1;
-    }
-
     from {
         opacity: 0;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
-}
-
-.fadeInLeft {
-    animation: fadeInLeft 1s linear both
-}
-
-@keyframes fadeIn {
     to {
         opacity: 1;
     }
 
+
+}
+
+.fadeInLeft {
+    animation: fadeInLeft 1s linear both;
+}
+
+@keyframes fadeIn {
     from {
         opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -46,3 +46,41 @@
     animation: fadeIn .8s linear both;
     animation-delay: .2s;
 }
+
+.fadeInOval {
+    animation: fadeIn .8s linear both;
+    animation-delay: .8s;
+}
+
+@keyframes fadeInName {
+    from {
+        opacity: 0;
+        transform: translate(50px, 50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+.fadeInName {
+    animation: fadeInName .8s ease-in both;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInLeftLine {
+    from {
+        opacity: 0;
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInLeftLine {
+    animation: fadeInLeftLine 1s ease-in both;
+}
+
