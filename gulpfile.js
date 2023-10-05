@@ -37,7 +37,7 @@ function buildStyles(cb) {
 		// 	noWebpClass: '.no-webp'
 		// }))
 		// .pipe(sourcemaps.write())
-		.pipe(gulp.dest('./css'))
+		// .pipe(gulp.dest('./css'))
 		// .pipe(cleanCss())
 		.pipe(csso())
 		.pipe(rename({ suffix: '.min' }))
