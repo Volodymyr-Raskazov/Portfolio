@@ -1,0 +1,42 @@
+[data-link] {
+   color: #4EE1A0;
+   text-transform: uppercase;
+   text-decoration: none;
+   font-size: 12px;
+   letter-spacing: 0.02em;
+   display: inline-block;
+   padding: 8px 20px;
+}
+
+.cursor {
+   pointer-events: none;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   width: 30px;
+   height: 30px;
+   border: 1px solid #4EE1A0;
+   margin: -15px 0 0 -15px;
+   pointer-events: none;
+   transition: all .2s ease-out;
+   
+   .cursor-ball {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      background: #4EE1A0;
+      margin: -2px 0 0 -2px;
+      transition: all .4s ease-out;
+   }
+   
+   &.hover {
+      border-radius: 8px;
+      .cursor-ball {
+         left: 13px;
+      }
+   }
+}
