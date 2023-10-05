@@ -570,6 +570,91 @@ footer .footer_nav .social a:last-child {
   padding-right: 0;
 }
 
+@-webkit-keyframes fadeInRight {
+  to {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation: fadeInRight 1s linear both;
+  animation: fadeInRight 1s linear both;
+}
+
+@-webkit-keyframes fadeInLeft {
+  to {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation: fadeInLeft 1s linear both;
+  animation: fadeInLeft 1s linear both;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+
+  from {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 0.8s linear both;
+  animation: fadeIn 0.8s linear both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
 html,
 body {
   /*height: 100%;*/
