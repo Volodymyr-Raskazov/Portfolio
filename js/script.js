@@ -1,23 +1,45 @@
 $(document).ready(animateElements);
 
 function animateElements() {
-   // animate in footer
-   animateToScroll("footer .form_send_message > *", "fadeInRight", false);
-   animateToScroll("footer .contact-cols .col h3, footer .contact-cols .col p, footer .oval", "fadeInLeft", false);
-   animateToScroll(".skills .skills_item", "fadeIn", false);
-   animateToScroll(".projects__item", "fadeIn", false);
+   const elementsToScroll = [
+      {selector: ".about > img", animClass: "fadeInOval", resetScrollUp: true, resetScrollDown: true},
+      {selector: ".about h1, .about h1 span", animClass: "fadeInName", resetScrollUp: true, resetScrollDown: true},
+      {selector: ".about .photo", animClass: "fadeInLeftLine", resetScrollUp: true, resetScrollDown: true},
+      {selector: ".about_me img", animClass: "fadeInLeft", resetScrollUp: true, resetScrollDown: true},
+
+      {selector: ".skills .skills_item, .projects__item", animClass: "fadeIn", resetScrollUp: true, resetScrollDown: true},
+
+      {selector: "footer .form_send_message > *", animClass: "fadeInRight", resetScrollUp: true, resetScrollDown: true},
+      {selector: "footer .contact-cols .col h3, footer .contact-cols .col p, footer .oval", animClass: "fadeInLeft", resetScrollUp: true, resetScrollDown: true},
+   ];
+
+   animateToScroll(elementsToScroll);
 }
-function animateToScroll(targetSelector, animationClass, resetOnScrollUp) {
+
+function animateToScroll(elementsToScroll) {
+
    $(window).on('scroll', function() {
-      let windowBottom = $(this).scrollTop() + $(this).innerHeight();
-      $(targetSelector).each(function() {
-         let objectBottom = $(this).offset().top;
-         if (objectBottom < windowBottom) {
-            $(this).addClass(animationClass);
-         } else if (resetOnScrollUp) {
-            $(this).removeClass(animationClass);
-         }
-      });
+      for (element of elementsToScroll) {
+         let windowBottom = $(this).scrollTop() + $(this).innerHeight();
+         let windowTop = $(this).scrollTop();
+
+         $(element.selector).each(function() {
+            let objectTop = $(this).offset().top;
+            if (objectTop < windowBottom) {
+               $(this).addClass(element.animClass);
+            } else if (element.resetScrollUp) {
+               $(this).removeClass(element.animClass);
+            }
+
+            if (element.resetScrollDown) {
+               let objectBottom = objectTop + $(this).innerHeight();
+               if (objectBottom < windowTop) {
+                  $(this).removeClass(element.animClass);
+               }
+            }
+
+         });
+      }
    });
 }
 
@@ -129,4 +151,4 @@ const raf = () => {
 
    requestAnimationFrame(raf)
 }
-raf()
+raf();
